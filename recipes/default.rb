@@ -33,6 +33,5 @@ file File.join(node['orchestrator']['path'], 'conf', 'orchestrator.conf.json') d
 end
 
 service 'orchestrator' do
-  provider Provider::Service::Redhat if centos?
   action :start
 end

@@ -32,7 +32,7 @@ if centos? && !node['orchestrator']['package']['url'].nil?
 end
 
 package 'orchestrator' do
-  source local_rpm if centos? && !local_rpm.nil?
-  version node['orchestrator']['package']['version'] if centos? && !node['orchestrator']['package']['version'].nil?
+  source local_rpm if centos? && local_rpm
+  version node['orchestrator']['package']['version'] if centos? && node['orchestrator']['package']['version']
   action node['orchestrator']['package']['version'].nil? ? :upgrade : :install
 end

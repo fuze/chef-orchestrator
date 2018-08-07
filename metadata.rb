@@ -15,7 +15,7 @@ depends 'database', '~> 6.1'
 depends 'packagecloud'
 depends 'percona', '~> 0.16'
 depends 'yum'
-depends 'yum-epel', '~> 2.1'
+depends 'yum-epel'
 
 supports 'centos'
 supports 'debian'
